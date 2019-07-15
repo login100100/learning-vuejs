@@ -22,7 +22,7 @@ export default new Router({
     {
       path: '/posts',
       name: 'posts',
-      component: () => import('./components/Posts.vue')
+      component: () => import('./views/PostsPage.vue')
     }
   ]
 })
