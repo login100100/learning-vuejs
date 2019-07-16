@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
     export default {
         name: "PostForm",
         data() {
@@ -18,14 +19,15 @@
             }
         },
         methods: {
+            ...mapActions(['addPost']),
             onSubmit(event) {
                 event.preventDefault();
                 const post = {
                     title: this.title,
                     description: this.description
                 }
-                // emit event to view above
-                this.$emit('add-post', post);
+                // emit action
+                this.addPost(post);
             }
         }
     }
