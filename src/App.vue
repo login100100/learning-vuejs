@@ -6,8 +6,17 @@
       <router-link to="/posts">Posts</router-link>
     </div>
     <router-view/>
+    <Alert/>
   </div>
 </template>
+<script>
+import Alert from './components/Alert';
+  export default {
+    components: {
+      Alert
+    }
+  }
+</script>
 
 <style lang="scss">
 #app {

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import PostsModule from './store/modules/Posts';
+import AlertModule from './store/modules/Alert';
 
 Vue.use(Vuex)
 
@@ -16,6 +17,7 @@ export default new Vuex.Store({
 
   },
   modules: {
-    PostsModule
+    PostsModule,
+    AlertModule
   }
 })

@@ -15,9 +15,6 @@
 import { mapGetters, mapActions } from 'vuex';
     export default {
         name: 'Posts',
-        props: {
-           Posts: Array 
-        },
         methods: {
             ...mapActions(['fetchPosts'])
         },
