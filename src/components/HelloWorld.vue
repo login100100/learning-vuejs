@@ -32,12 +32,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+<script lang="ts">
+import { Vue, Component, Prop } from 'vue-property-decorator'
+
+@Component({
+})
+export default class HelloWorld extends Vue {
+   @Prop({default: '', type: String}) msg;
 }
 </script>
 
