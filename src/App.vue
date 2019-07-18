@@ -9,12 +9,18 @@
     <Alert/>
   </div>
 </template>
-<script>
-import Alert from './components/Alert';
-  export default {
+<script lang="ts">
+  import Vue from 'vue'
+  import Component from 'vue-class-component'
+  import Alert from '@/components/Alert.vue'
+
+  @Component({
     components: {
       Alert
     }
+  })
+  export default class App extends Vue {
+    
   }
 </script>
 
