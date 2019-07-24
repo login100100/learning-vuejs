@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
+// import { Action, Mutation } from 'vuex-module-decorators';
+import AlertModule from '@/store/modules/Alert.module';
 // import PostsModule from './store/modules/Posts';
 // import AlertModule from './store/modules/Alert';
 
@@ -9,10 +11,6 @@ Vue.use(Vuex)
 // global vuex store imports
 export default new Vuex.Store<any>({
   state: {
-    alert: {
-      status: '',
-      message: ''
-    },
     posts: {
       posts: [
         {
@@ -88,6 +86,6 @@ export default new Vuex.Store<any>({
     }
   },
   modules: {
-
+    alert: AlertModule
   }
 })
