@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div v-bind:key="post.id" v-for="post in getAllPosts">
+        <div v-bind:key="post.id" v-for="post in POSTS_GET_ALL">
             <h2>
                 {{post.title}}
             </h2>
@@ -16,13 +16,13 @@ import { mapGetters, mapActions } from 'vuex';
     export default {
         name: 'Posts',
         methods: {
-            ...mapActions(['fetchPosts'])
+            ...mapActions(['POSTS_FETCH'])
         },
         computed: {
-            ...mapGetters(['getAllPosts'])
+            ...mapGetters(['POSTS_GET_ALL'])
         },
         created() {
-            this.fetchPosts();
+            this.POSTS_FETCH;
         }
     }
 </script>

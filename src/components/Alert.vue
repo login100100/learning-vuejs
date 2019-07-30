@@ -1,8 +1,8 @@
 <template>
-    <div class="alert" v-bind:class="getAlertStatus" v-if="getAlertMessage">
+    <div class="alert" v-bind:class="ALERT_GET_STATUS" v-if="ALERT_GET_MESSAGE">
         <div class="container">
             <span>
-               {{getAlertMessage}} 
+               {{ALERT_GET_MESSAGE}} 
             </span>
         </div>
     </div>
@@ -17,7 +17,7 @@ import { mapGetters } from 'vuex';
             message: String
         },
         computed: {
-            ...mapGetters(['getAlertStatus', 'getAlertMessage'])
+            ...mapGetters(['ALERT_GET_MESSAGE', 'ALERT_GET_STATUS'])
         }
     }
 </script>

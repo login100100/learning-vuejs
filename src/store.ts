@@ -43,23 +43,11 @@ export default new Vuex.Store<any>({
     }
   },
   mutations: {
-    ALERT_SUCCESS(state, message: string) {
-      state.alert.status = "alert_success";
-      state.alert.message = message;
-    },
-    ALERT_ERROR(state, message: string) {
-      state.status = 'alert-error';
-      state.message = message;
-    },
-    ALERT_CLEAR(state) {
-      state.status = '';
-      state.message = '';
-    },
     POSTS_FETCH(state, posts: Array<any>) {
       state.posts.posts = posts;
     },
     POSTS_NEW(state, post: {}) {
-      state.posts.push(post);
+      state.posts.posts.push(post);
     }
   },
   getters: {

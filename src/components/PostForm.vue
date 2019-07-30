@@ -19,7 +19,7 @@ import { mapActions } from 'vuex';
             }
         },
         methods: {
-            ...mapActions(['addPost']),
+            ...mapActions(['POSTS_NEW']),
             onSubmit(event) {
                 event.preventDefault();
                 const post = {
@@ -27,7 +27,7 @@ import { mapActions } from 'vuex';
                     description: this.description
                 }
                 // emit action
-                this.addPost(post);
+                this.POSTS_NEW(post);
             }
         }
     }
