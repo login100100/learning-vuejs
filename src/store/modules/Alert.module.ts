@@ -7,12 +7,12 @@ export default class Alert extends VuexModule {
 
     @Mutation
     ALERT_SUCCESS(message: String) {
-        this.status = `alert_success`;
+        this.status = `alert-success`;
         this.message = message;
     }
     @Mutation
     ALERT_ERROR(message: String) {
-        this.status = `alert_error`;
+        this.status = `alert-error`;
         this.message = message;
     }
     @Mutation
