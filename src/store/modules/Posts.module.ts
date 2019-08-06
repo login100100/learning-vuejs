@@ -28,8 +28,10 @@ class PostsModule extends VuexModule {
     }
 
     @Action({ commit: 'NEW_POST' })
-    addNew(post: PostParam) {
-        return post
+    async addNew(post: PostParam) {
+        const request = await axios.post('http://localhost:4000/posts', post);
+        store.commit('ALERT_SUCCESS', `Status ${request.status}: ${request.statusText}`);
+        return request.data
     }
 
     @MutationAction
