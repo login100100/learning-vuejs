@@ -11,10 +11,9 @@
     </div>
 </template>
 
-<script>
+<script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
 import PostsModule from '@/store/modules/Posts.module';
-import Post from '@/store/modules/Posts.module';
 
 @Component
 export default class Posts extends Vue {

@@ -22,11 +22,11 @@ class PostsModule extends VuexModule {
     $POST?: Post;
 
     @Mutation
-    POSTS_NEW(post: Post){
+    NEW_POST(post: Post){
         this.$POSTS.push(post);
     }
 
-    @Action({ commit: 'POSTS_NEW' })
+    @Action({ commit: 'NEW_POST' })
     addNew(post: PostParam) {
         return post
     }

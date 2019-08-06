@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import Posts from '@/store/modules/Posts.module';
+import PostsModule from '@/store/modules/Posts.module';
 import { mapActions } from 'vuex';
 
 @Component
@@ -24,7 +24,7 @@ export default class PostForm extends Vue {
             title: this.title,
             description: this.description
         }
-        Posts.addNew(post);
+        PostsModule.addNew(post);
     }
 }
 </script>
