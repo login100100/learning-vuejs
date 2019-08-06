@@ -13,6 +13,7 @@ import { Vue, Component } from 'vue-property-decorator';
 
 @Component
 export default class Alert extends Vue {
+    // AlertModule is static module, values get accessed old way method
     get message() {
         return this.$store.state.AlertModule.$MESSAGE;
     }

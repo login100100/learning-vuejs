@@ -11,6 +11,7 @@ interface PostParam {
     title: string;
     description: string;
 }
+// dynamic modules create at runtime and needs different export
 @Module({
     namespaced: true,
     name: 'posts',

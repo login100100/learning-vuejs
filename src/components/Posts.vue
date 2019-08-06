@@ -17,6 +17,7 @@ import PostsModule from '@/store/modules/Posts.module';
 
 @Component
 export default class Posts extends Vue {
+    // dynamic PostsModule have different syntax for accessing module parameters and methods
     get posts() {
         return PostsModule.$POSTS;
     }
