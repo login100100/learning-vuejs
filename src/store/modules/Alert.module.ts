@@ -2,23 +2,23 @@ import { VuexModule, Module, Mutation } from "vuex-module-decorators";
 
 @Module
 export default class Alert extends VuexModule {
-    status: String = '';
-    message: String = '';
+    $STATUS: string = ``;
+    $MESSAGE: string = ``;
 
     @Mutation
-    ALERT_SUCCESS(message: String) {
-        this.status = `alert-success`;
-        this.message = message;
+    ALERT_SUCCESS(message: string) {
+        this.$STATUS = `alert-success`;
+        this.$MESSAGE = message;
     }
     @Mutation
-    ALERT_ERROR(message: String) {
-        this.status = `alert-error`;
-        this.message = message;
+    ALERT_ERROR(message: string) {
+        this.$STATUS = `alert-error`;
+        this.$MESSAGE = message;
     }
     @Mutation
     ALERT_CLEAR() {
-        this.status = ``;
-        this.message = '';
+        this.$STATUS = ``;
+        this.$MESSAGE = ``;
     }
 }
 VuexModule

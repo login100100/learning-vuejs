@@ -1,25 +1,26 @@
 <template>
-    <div class="alert" v-bind:class="ALERT_GET_STATUS" v-if="ALERT_GET_MESSAGE">
+    <div class="alert" v-bind:class="status" v-if="message">
         <div class="container">
             <span>
-               {{ALERT_GET_MESSAGE}} 
+               {{ message }} 
             </span>
         </div>
     </div>
 </template>
 
-<script>
-import { mapGetters } from 'vuex';
-    export default {
-        name: "Alert",
-        props: {
-            status: String,
-            message: String
-        },
-        computed: {
-            ...mapGetters(['ALERT_GET_MESSAGE', 'ALERT_GET_STATUS'])
-        }
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator';
+
+@Component
+export default class Alert extends Vue {
+    get message() {
+        return this.$store.state.AlertModule.$MESSAGE;
     }
+
+    get status() {
+        return this.$store.state.AlertModule.$STATUS;
+    }
+}
 </script>
 
 <style lang="scss" scoped>
